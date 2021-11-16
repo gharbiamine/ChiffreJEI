@@ -1,0 +1,11 @@
+
+
+.dismissButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: cyan;
+    transform: scale(3) translateY(30%) translateX(30%);
+
+}
