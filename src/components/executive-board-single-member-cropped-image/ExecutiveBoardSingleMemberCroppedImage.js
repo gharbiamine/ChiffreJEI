@@ -5,16 +5,21 @@ export const ExecutiveBoardSingleMemberCroppedImage= ( {name , setMember}) => {
 
     return (
         <>
+<div
+          onMouseOver={()=>setMember(name.id)}
 
+          onMouseLeave={()=>setMember("")}
+          className={styles.bureau}
+>
             <img
-                src={`assets/executive-board-images/images/${name.id}.png`}
+                src={`assets/executive-board-images/images/${name.id}1.png`}
                 alt= ""
 
-                    onClick={()=>setMember(name.id)}
+
 
                 className={styles.singleCroppedImage}
             />
-
+</div>
         </>
     )
 }

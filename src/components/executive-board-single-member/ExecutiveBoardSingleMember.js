@@ -1,6 +1,6 @@
 
 import styles from "./executiveBoardSingleMember.module.css";
-import {ExecutiveBoardDismissInfosButton} from "../executive-board-dismiss-infos-button/ExecutiveBoardDismissInfosButton";
+
 
 
 
@@ -20,7 +20,7 @@ export const ExecutiveBoardSingleMember = ( {member ,setMember}) => {
 
                 />
 
-            <ExecutiveBoardDismissInfosButton setMember = {setMember} />
+
 
 
     </div>

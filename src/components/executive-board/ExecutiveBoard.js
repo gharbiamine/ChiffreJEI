@@ -26,6 +26,8 @@ export const ExecutiveBoard = ()=> {
                             />)
                         }
 
+
+
                         {
 
                             member!=="" && (<ExecutiveBoardSingleMember member={member} setMember={setMember} />
