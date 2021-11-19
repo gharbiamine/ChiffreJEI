@@ -6,7 +6,8 @@ var transitions = ["transitionleft", "transitionright"];
 const PanelRight = (props) => {
   const [align, setAlign] = useState(false);
   let transition = transitions[swap];
-  let side = "split panelright";
+  let panel = "panelright";
+  let side = "split " + panel;
   let cssClass = `${side}  ${align ? transition : ""}`;
   const memoizedCallback = useCallback(() => {
     if (align) {
@@ -15,6 +16,7 @@ const PanelRight = (props) => {
     } else {
       transition = transitions[1 - swap];
       cssClass = `${side}  ${align ? transition : ""}`;
+      document.querySelector("." + panel).style.zIndex = 1;
     }
   }, [align]);
   useEffect(() => {
@@ -25,10 +27,7 @@ const PanelRight = (props) => {
       className={cssClass}
       onClick={() => {
         setAlign(!align);
-        // swap = 1 - swap;
-        console.log(align);
-        console.log(cssClass);
-        console.log(swap);
+        document.querySelector("." + panel).style.zIndex = 2;
       }}
     >
       <div className="centered">

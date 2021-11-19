@@ -1,12 +1,14 @@
 import { useEffect, useCallback, useState } from "react";
 import Statistics from "./Statistic";
 import "./Panel.css";
+import { getElementError } from "@testing-library/dom";
 var swap = 0;
 var transitions = ["transitionright", "transitionleft"];
 const PanelLeft = (props) => {
   const [align, setAlign] = useState(false);
   let transition = transitions[swap];
-  let side = "split panelleft";
+  let panel = "panelleft";
+  let side = "split " + panel;
   let cssClass = `${side}  ${align ? transition : ""}`;
   const memoizedCallback = useCallback(() => {
     if (align) {
@@ -15,6 +17,7 @@ const PanelLeft = (props) => {
     } else {
       transition = transitions[1 - swap];
       cssClass = `${side}  ${align ? transition : ""}`;
+      document.querySelector("." + panel).style.zIndex = 1;
     }
   }, [align]);
   useEffect(() => {
@@ -25,10 +28,7 @@ const PanelLeft = (props) => {
       className={cssClass}
       onClick={() => {
         setAlign(!align);
-        // swap = 1 - swap;
-        console.log(align);
-        console.log(cssClass);
-        console.log(swap);
+        document.querySelector("." + panel).style.zIndex += 2;
       }}
     >
       <div className="centered">
