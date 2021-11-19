@@ -1,7 +1,6 @@
 import "./App.css";
 import CountUp from "react-countup";
 import { Component } from "react";
-// import { motion } from "framer-motion";
 
 class Statistics extends Component {
   static defualtPropos = {
@@ -13,7 +12,14 @@ class Statistics extends Component {
 
   render() {
     return (
-      <div className="stat">
+      <div
+        className="stat"
+        onClick={() => {
+          // document.querySelector(".stat").style.top = "40%";
+          // document.querySelector(".stat").style.fontSize = "200px";
+          // document.querySelector(".stat").style.top = "0.7s ease-in-out";
+        }}
+      >
         <CountUp
           start={this.props.start || Statistics.defualtPropos.start}
           end={this.props.end || Statistics.defualtPropos.end}

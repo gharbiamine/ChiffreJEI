@@ -1,3 +1,8 @@
 .stat {
   font-size: 100px;
 }
+.highlighted {
+  top: 40%;
+  font-size: 200px;
+  transition-delay: 0.7s ease-in-out;
+}

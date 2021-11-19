@@ -1,14 +1,18 @@
 .panelright {
   right: 0;
-  background-image: url("../assets/images/background2.jpg");
+  background-image: url("../assets/images/background4.jpg");
   background-size: cover;
-  transition: 0.7s ease-in-out;
+  background-repeat: no-repeat;
+  transition: 0.7s ease-in all, 0s z-index;
+  transition: 0.7s ease-out;
 }
 .panelleft {
   left: 0;
-  background-image: url("../assets/images/background.jpg");
+  background-image: url("../assets/images/background3.jpg");
   background-size: cover;
-  transition: 0.7s ease-in-out;
+  background-repeat: no-repeat;
+  transition: 0.7s ease-out all, 0s z-index;
+  transition: 0.7s ease-in;
 }
 .centered {
   position: absolute;
@@ -20,7 +24,7 @@
 .split {
   height: 100%;
   width: 50%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 0;
   overflow-x: hidden;

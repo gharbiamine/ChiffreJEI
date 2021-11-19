@@ -11,7 +11,9 @@ const PanelRight = (props) => {
   let cssClass = `${side}  ${align ? transition : ""}`;
   const memoizedCallback = useCallback(() => {
     if (align) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       transition = transitions[swap];
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       cssClass = `${side}  ${align ? transition : ""}`;
     } else {
       transition = transitions[1 - swap];
