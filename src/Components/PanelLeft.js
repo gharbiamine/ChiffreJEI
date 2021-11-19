@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState } from "react";
-import Statistics from "./Statistic";
+import Statistics from "./Statistics";
 import "./Panel.css";
 var swap = 0;
 var transitions = ["transitionright", "transitionleft"];
@@ -14,27 +14,31 @@ const PanelLeft = (props) => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       transition = transitions[swap];
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      cssClass = `${side}  ${align ? transition : ""}`;
+      cssClass = `${side}  ${transition}`;
     } else {
       transition = transitions[1 - swap];
-      cssClass = `${side}  ${align ? transition : ""}`;
-      document.querySelector("." + panel).style.zIndex = 2;
+      cssClass = `${side}`;
+      setTimeout(() => {
+        document.querySelector("." + panel).style.zIndex = 1;
+        console.log("here");
+      }, 700);
     }
   }, [align]);
   useEffect(() => {
     memoizedCallback();
   }, [memoizedCallback]);
+
   return (
     <div
       className={cssClass}
-      onClick={() => {
+      onClick={(e) => {
         setAlign(!align);
         document.querySelector("." + panel).style.zIndex = 2;
       }}
     >
       <div className="centered">
         <div>
-          <Statistics {...props.stat} />
+          <Statistics {...props.stat} align={align} />
         </div>
         <h2>{props.title}</h2>
       </div>
