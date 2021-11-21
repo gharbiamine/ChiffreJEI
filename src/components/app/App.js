@@ -1,15 +1,11 @@
+
 import styles from "./app.module.css"
-import {ExecutiveBoard} from "../executive-board/ExecutiveBoard";
-
-
+import {HomePage} from "../../pages/home-page/HomePage";
 function App() {
   return (
    <>
+<HomePage/>
 
-<div className={styles.global}>
-       <ExecutiveBoard/>
-
-</div>
    </>
   );
 }

@@ -1,34 +1,24 @@
  import {EXECUTIVE_BOARD_DATA} from "./data";
+import styles from "./executiveBoardSingleMemberInfos.module.css"
 export const ExecutiveBoardSingleMemberInfos = ( {name})=> {
 
  const member =  EXECUTIVE_BOARD_DATA.find( member => member.id === name) ;
 
     return (
         <>
-            {
-                !member && (
-                    <h1> Bureau executif mandat 2020 -2021</h1>
-                )
-            }
-            {member && (
-            <>
-            <h1>
+
+
+            <div className={styles.infos} >
+            <div className={styles.memberName} style={{left:member.memberNamePosition.left,top:member.memberNamePosition.top}}>
                 {member.name}
-            </h1>
-            <h1>
-                {member.email}
-            </h1>
-            <h1>
+            </div>
+
+            <div className={styles.memberRole} style={{left:member.memberRolePosition.left,top:member.memberRolePosition.top}}>
                 {member.role}
-            </h1>
-            <h1>
-                {member.phoneNumber}
-            </h1>
-            <h1>
-                {member.quote}
-        </h1>
-            </>
-                )}
+            </div>
+
+            </div>
+
 
         </>
     )
