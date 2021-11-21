@@ -32,8 +32,8 @@ onMouseLeave={()=>mouseLeave()}
           className={styles.bureau}
 >
             <img
-                src={`assets/executive-board-images/images/${member.id}.png`}
-                alt= ""
+                src={`assets/executive-board-images/cropped-members-images/${member.id}.png`}
+                alt= "executive board members"
 
 
                 className={styles.singleCroppedImage}
