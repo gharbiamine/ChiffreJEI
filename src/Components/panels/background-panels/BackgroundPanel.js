@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import "./BackgroundPanel.css";
+import styles from "../Panel.module.css";
 
 class BackgroundPanel extends Component {
   render() {

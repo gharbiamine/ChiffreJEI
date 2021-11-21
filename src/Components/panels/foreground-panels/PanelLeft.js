@@ -1,12 +1,12 @@
 import { useEffect, useCallback, useState } from "react";
-import Statistics from "./Statistics";
-import "./Panel.css";
+import Statistics from "../../stats/Statistics";
+import styles from "../Panel.module.css";
 var swap = 0;
-var transitions = ["transitionleft", "transitionright"];
-const PanelRight = (props) => {
+var transitions = ["transitionright", "transitionleft"];
+const PanelLeft = (props) => {
   const [align, setAlign] = useState(false);
   let transition = transitions[swap];
-  let panel = "panelright";
+  let panel = "panelleft";
   let side = "split " + panel;
   let cssClass = `${side}  ${align ? transition : ""}`;
   const memoizedCallback = useCallback(() => {
@@ -14,25 +14,30 @@ const PanelRight = (props) => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       transition = transitions[swap];
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      cssClass = `${side}  ${align ? transition : ""}`;
+      cssClass = `styles.${side}  styles.${transition}`;
+      console.log(cssClass);
     } else {
       transition = transitions[1 - swap];
-      cssClass = `${side}  ${align ? transition : ""}`;
-      setTimeout((document.querySelector("." + panel).style.zIndex = 1), 700);
+      cssClass = `styles.${side}`;
+      console.log(cssClass);
+      setTimeout(() => {
+        document.querySelector("." + panel).style.zIndex = 1;
+      }, 700);
     }
   }, [align]);
   useEffect(() => {
     memoizedCallback();
   }, [memoizedCallback]);
+
   return (
     <div
       className={cssClass}
-      onClick={() => {
+      onClick={(e) => {
         setAlign(!align);
         document.querySelector("." + panel).style.zIndex = 2;
       }}
     >
-      <div className="centered">
+      <div className={styles.centered}>
         <div>
           <Statistics {...props.stat} align={align} />
         </div>
@@ -41,4 +46,4 @@ const PanelRight = (props) => {
     </div>
   );
 };
-export default PanelRight;
+export default PanelLeft;

@@ -1,17 +1,22 @@
 .panelright {
   right: 0;
-  background-image: url("../assets/images/background4.jpg");
+  background-image: url("../../assets/images/background4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.7s ease-in-out all;
+  overflow: hidden;
+  height: fit-content;
+
   /* transition: 0.7s ease-out; */
 }
 .panelleft {
   left: 0;
-  background-image: url("../assets/images/background3.jpg");
+  background-image: url("../../assets/images/background3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.7s ease-in-out all, 0s z-index;
+  overflow: hidden;
+  height: fit-content;
 }
 .centered {
   position: absolute;
@@ -26,7 +31,7 @@
   position: absolute;
   z-index: 1;
   top: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-top: 20px;
   transition: 0.7s ease-in-out all, z-index 0s;
 }
@@ -38,4 +43,3 @@
   transform: translateX(100%);
   z-index: 2;
 }
-

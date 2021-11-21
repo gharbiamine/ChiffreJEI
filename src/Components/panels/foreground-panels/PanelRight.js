@@ -1,12 +1,12 @@
 import { useEffect, useCallback, useState } from "react";
-import Statistics from "./Statistics";
-import "./Panel.css";
+import Statistics from "../../stats/Statistics";
+import styles from "../Panel.module.css";
 var swap = 0;
-var transitions = ["transitionright", "transitionleft"];
-const PanelLeft = (props) => {
+var transitions = ["transitionleft", "transitionright"];
+const PanelRight = (props) => {
   const [align, setAlign] = useState(false);
   let transition = transitions[swap];
-  let panel = "panelleft";
+  let panel = "panelright";
   let side = "split " + panel;
   let cssClass = `${side}  ${align ? transition : ""}`;
   const memoizedCallback = useCallback(() => {
@@ -18,25 +18,21 @@ const PanelLeft = (props) => {
     } else {
       transition = transitions[1 - swap];
       cssClass = `${side}`;
-      setTimeout(() => {
-        document.querySelector("." + panel).style.zIndex = 1;
-        console.log("here");
-      }, 700);
+      setTimeout((document.querySelector("." + panel).style.zIndex = 1), 700);
     }
   }, [align]);
   useEffect(() => {
     memoizedCallback();
   }, [memoizedCallback]);
-
   return (
     <div
-      className={cssClass}
-      onClick={(e) => {
+      className={`styles.${cssClass}`}
+      onClick={() => {
         setAlign(!align);
         document.querySelector("." + panel).style.zIndex = 2;
       }}
     >
-      <div className="centered">
+      <div className={styles.centered}>
         <div>
           <Statistics {...props.stat} align={align} />
         </div>
@@ -45,4 +41,4 @@ const PanelLeft = (props) => {
     </div>
   );
 };
-export default PanelLeft;
+export default PanelRight;
