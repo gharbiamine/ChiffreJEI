@@ -7,18 +7,18 @@ function TimelineEvent(prop) {
     Aos.init({ duration: 2000 });
   }, []);
   var animation = "";
-  var classNom = "";
-  if (prop.i % 2) {
+  var classStyle = "";
+  if (prop.odd % 2) {
     animation = "fade-right";
-    classNom=styles.left;
+    classStyle=styles.left;
   }
   else {
     animation = "fade-left";
-    classNom =styles.right;
+    classStyle =styles.right;
   }
   return (
     <li
-      className={classNom}
+      className={classStyle}
       onMouseOver={(e) => {
         var target = e.target.closest("li");
         var timeline = target.parentElement.parentElement;

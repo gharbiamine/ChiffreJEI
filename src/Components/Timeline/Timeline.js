@@ -2,7 +2,7 @@ import styles from "./Timeline.module.css";
 import React from "react";
 import TimelineEvent from "./TimelineEvent";
 function Timeline() {
-  var i = 0;
+  var odd = 0;
   const timeline = [
     {
       imgLink:
@@ -56,11 +56,11 @@ function Timeline() {
     <div>
       <div className={styles.container}>
         {timeline.map((event) => {
-          i = i + 1;
+          odd = odd + 1;
           return (
             <div className={styles.timeline} >
               <ul>
-                <TimelineEvent event={event} i={i}></TimelineEvent>
+                <TimelineEvent event={event} odd={odd}></TimelineEvent>
               </ul>
             </div>
           );
