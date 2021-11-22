@@ -1,13 +1,11 @@
-import { Component } from "react";
+import styles from "./BackgroundPanel.module.css";
+import React from "react";
 
-import styles from "../Panel.module.css";
+export const BackgroundPanel = (props) => {
+  const side = props.side;
+  const name = side === "right" ? styles.backpanelright : styles.backpanelleft;
 
-class BackgroundPanel extends Component {
-  render() {
-    let side = this.props.side;
-    side = "split backpanel" + side.trim();
+  return <div className={`${styles.split} ${name}`}></div>;
+};
 
-    return <div className={side}></div>;
-  }
-}
 export default BackgroundPanel;
