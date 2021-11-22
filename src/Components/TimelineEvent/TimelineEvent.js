@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Timeline.module.css";
+import styles from "./TimelineEvent.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 function TimelineEvent(prop) {
