@@ -1,15 +1,11 @@
-import { useEffect, useCallback, useState } from "react";
+import { useState } from "react";
 import Statistics from "../../stats/Statistics";
 import styles from "../Panel.module.css";
 
 const PanelRight = (props) => {
   const [align, setAlign] = useState(false);
 
-  let name = align ? styles.transitionleft : "";
-  const memoizedCallback = useCallback(() => {}, [align]);
-  useEffect(() => {
-    memoizedCallback();
-  }, [memoizedCallback]);
+  let name = align ? styles.transitionleft : styles.transitionreturnright;
 
   return (
     <div

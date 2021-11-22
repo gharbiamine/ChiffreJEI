@@ -3,11 +3,9 @@
   background-image: url("../../assets/images/background4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 0.7s ease-in-out all;
+  transition: 0.7s ease-in-out all, 0s z-index;
   overflow: hidden;
   height: fit-content;
-
-  /* transition: 0.7s ease-out; */
 }
 .panelleft {
   left: 0;
@@ -33,7 +31,7 @@
   top: 0;
   /* overflow-x: hidden; */
   padding-top: 20px;
-  transition: 0.7s ease-in-out all, z-index 0s;
+  /* transition: 0.7s ease-in-out all, z-index 0s; */
 }
 .transitionleft {
   transform: translateX(-100%);
@@ -42,4 +40,13 @@
 .transitionright {
   transform: translateX(100%);
   z-index: 2;
+}
+
+.transitionreturnleft {
+  z-index: 1;
+  transition: 0.7s ease-in-out all, 2s z-index;
+}
+.transitionreturnright {
+  z-index: 1;
+  transition: 0.7s ease-in-out all, 2s z-index;
 }

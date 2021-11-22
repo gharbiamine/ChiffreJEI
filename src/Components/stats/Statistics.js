@@ -1,11 +1,10 @@
 import CountUp from "react-countup";
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import styles from "../stats/Statistics.module.css";
 
 const Statistic = (props) => {
-  // const refContainer = useRef(false);
   useEffect(() => {
     // document.querySelector(".stat").style.fontSize = "300px";
     console.log("Stat useEffect");
