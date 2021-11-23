@@ -10,7 +10,22 @@
   background-size: cover;
   z-index: 0;
 }
-
+.backpanelleft .hidden {
+  animation-duration: 1s;
+  animation-name: concealTextLeft;
+}
+.backpanelleft .animated {
+  animation-duration: 1s;
+  animation-name: revealTextLeft;
+}
+.backpanelright .hidden {
+  animation-duration: 1s;
+  animation-name: concealTextRight;
+}
+.backpanelright .animated {
+  animation-duration: 1s;
+  animation-name: revealTextRight;
+}
 .split {
   height: 100%;
   width: 50%;
@@ -25,44 +40,46 @@
   font-size: 20px;
   padding-top: 10vh;
 }
-.hidden {
+/* .hidden {
   animation-duration: 1s;
-  animation-name: concealText;
+  animation-name: concealTextRight;
 }
 .animated {
   animation-duration: 1s;
-  animation-name: revealText;
-}
+  animation-name: revealTextRight;
+} */
 
-@keyframes revealText {
+@keyframes revealTextRight {
   from {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateX(100%);
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(0%);
   }
 }
 @keyframes revealTextLeft {
   from {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateX(-100%);
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(0%);
   }
 }
-@keyframes concealText {
+@keyframes concealTextRight {
   from {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(0%);
   }
   to {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateX(100%);
+  }
+}
+@keyframes concealTextLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

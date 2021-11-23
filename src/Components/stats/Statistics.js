@@ -11,7 +11,7 @@ const Statistic = ({ start, end, delay, duration, align, prefix, suffix }) => {
     <div
       className={styles.stat}
       onClick={() => {
-        console.log("Stat on click");
+        // console.log("Stat on click");
       }}
     >
       <VisibilitySensor partialVisibility>
