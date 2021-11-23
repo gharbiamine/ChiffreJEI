@@ -1,3 +1,12 @@
+.panelleft {
+  left: 0;
+  background-image: url("../../../assets/images/background3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.7s ease-in-out all, 0s z-index;
+  overflow: hidden;
+  height: fit-content;
+}
 .panelright {
   right: 0;
   background-image: url("../../../assets/images/background4.jpg");
@@ -7,7 +16,14 @@
   overflow: hidden;
   height: fit-content;
 }
-
+.transitionright {
+  transform: translateX(100%);
+  z-index: 2;
+}
+.transitionreturnleft {
+  z-index: 1;
+  transition: 0.7s ease-in-out all, 2s z-index;
+}
 .centered {
   position: absolute;
   top: 50%;

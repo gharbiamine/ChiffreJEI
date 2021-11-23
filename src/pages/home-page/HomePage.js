@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./homePage.module.css";
 import { FullPage, Slide } from "react-full-page";
-import PanelRight from "../../Components/panels/foreground-panels/PanelRight";
-import PanelLeft from "../../Components/panels/foreground-panels/PanelLeft";
+import Panel from "../../Components/panels/foreground-panels/Panel";
 
 export const HomePage = () => {
   return (
@@ -11,11 +10,13 @@ export const HomePage = () => {
         <FullPage>
           <Slide>
             <div className={styles.fullscreen}>
-              <PanelLeft
+              <Panel
+                side={"left"}
                 title={"Projets réalisés"}
                 stat={{ start: 1, end: 20, delay: 0, duration: 2 }}
               />
-              <PanelRight
+              <Panel
+                side={"right"}
                 title={"Pourcentage el rojla"}
                 stat={{
                   start: 50,
@@ -29,11 +30,13 @@ export const HomePage = () => {
           </Slide>
           <Slide>
             <div className={styles.fullscreen}>
-              <PanelLeft
+              <Panel
+                side={"left"}
                 title={"Projets réalisés"}
                 stat={{ start: 1, end: 20, delay: 0, duration: 2 }}
               />
-              <PanelRight
+              <Panel
+                side={"right"}
                 title={"Pourcentage el rojla"}
                 stat={{
                   start: 50,
@@ -47,11 +50,13 @@ export const HomePage = () => {
           </Slide>
           <Slide>
             <div className={styles.fullscreen}>
-              <PanelLeft
+              <Panel
+                side={"left"}
                 title={"Projets réalisés"}
                 stat={{ start: 1, end: 20, delay: 0, duration: 2 }}
               />
-              <PanelRight
+              <Panel
+                side={"right"}
                 title={"Pourcentage el rojla"}
                 stat={{
                   start: 50,

@@ -4,7 +4,7 @@ import React from "react";
 export const BackgroundPanel = ({ side, align }) => {
   const name = side === "right" ? styles.backpanelright : styles.backpanelleft;
   const DescriptionText = align ? styles.animated : styles.hidden;
-
+  // console.log(name);
   return (
     <>
       <div className={`${styles.split} ${name}`} style={{ overflow: "hidden" }}>

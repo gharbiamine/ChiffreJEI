@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Statistics from "../../stats/Statistics";
-import styles from "./PanelLeft.module.css";
+import styles from "./Panel.module.css";
 import BackgroundPanel from "../background-panels/BackgroundPanel";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -14,12 +14,22 @@ const PanelLeft = (props) => {
   }, []);
   let name = align ? styles.transitionright : styles.transitionreturnleft;
   const transitionDelay = align === true ? 0.7 : 0;
-
+  const panelname =
+    props.side === "right" ? styles.panelright : styles.panelleft;
+  if (props.side === "right") {
+    name = align ? styles.transitionleft : styles.transitionreturnright;
+    console.log("here right");
+    console.log(name);
+  } else {
+    name = align ? styles.transitionright : styles.transitionreturnleft;
+    console.log("here left");
+    console.log(name);
+  }
   return (
     <>
-      <BackgroundPanel side={"left"} align={align} />
+      <BackgroundPanel side={props.side} align={align} />
       <div
-        className={`${styles.split} ${styles.panelleft} ${name}`}
+        className={`${styles.split} ${name} ${panelname} `}
         style={{
           transition: `0.7s ease-in-out all; 0s z-index  ${transitionDelay}s`,
         }}
@@ -27,7 +37,7 @@ const PanelLeft = (props) => {
           setAlign(!align);
         }}
       >
-        <div className={styles.centered}>
+        <div className={`${styles.centered}`}>
           <div>
             <Statistics {...props.stat} align={align} />
           </div>
