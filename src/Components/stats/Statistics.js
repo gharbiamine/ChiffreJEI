@@ -5,18 +5,22 @@ import VisibilitySensor from "react-visibility-sensor";
 import styles from "../stats/Statistics.module.css";
 
 const Statistic = ({ start, end, delay, duration, align, prefix, suffix }) => {
+  const highlighted = align ? styles.animated : styles.static;
   useEffect(() => {}, [align]);
 
   return (
     <div
-      className={styles.stat}
+      className={`${styles.stat} ${highlighted}`}
       onClick={() => {
         // console.log("Stat on click");
       }}
     >
       <VisibilitySensor partialVisibility>
         {({ isVisible }) => (
-          <div style={{ height: 100 }}>
+          <div
+            style={{ height: 100 }}
+            className={`${styles.stat} ${highlighted}`}
+          >
             {isVisible ? (
               <CountUp
                 start={start}

@@ -1,8 +1,30 @@
 .stat {
-  font-size: 100px;
+  font-size: 7vw;
 }
-.highlighted {
-  top: 40%;
-  font-size: 200px;
-  transition-delay: 0.7s ease-in-out;
+@keyframes highlightText {
+  to {
+    transform: translateY(-50%);
+    font-size: 8vw;
+  }
+}
+@keyframes unhighlightText {
+  to {
+    transform: translateY(0%);
+  }
+  from {
+    transform: translateY(-50%);
+    font-size: 8vw;
+  }
+}
+
+.animated {
+  animation-duration: 0.7s;
+  animation-name: highlightText;
+  animation-fill-mode: forwards;
+}
+
+.static {
+  animation-duration: 0.7s;
+  animation-name: unhighlightText;
+  animation-fill-mode: forwards;
 }

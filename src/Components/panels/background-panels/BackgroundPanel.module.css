@@ -1,14 +1,14 @@
 .backpanelright {
   right: 0;
-  background-color: burlywood;
+  background-color: #25243a;
   background-size: cover;
-  z-index: 0;
+  z-index: 1;
 }
 .backpanelleft {
   left: 0;
-  background-color: burlywood;
+  background-color: #25243a;
   background-size: cover;
-  z-index: 0;
+  z-index: 1;
 }
 .backpanelleft .hidden {
   animation-duration: 1s;
@@ -18,6 +18,9 @@
   animation-duration: 1s;
   animation-name: revealTextLeft;
 }
+.backpanelleft.hiddenBorder {
+  border-right: 0px solid black;
+}
 .backpanelright .hidden {
   animation-duration: 1s;
   animation-name: concealTextRight;
@@ -26,28 +29,28 @@
   animation-duration: 1s;
   animation-name: revealTextRight;
 }
+.backpanelright.hiddenBorder {
+  border-left: 0px solid black;
+}
 .split {
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
+  overflow: hidden;
 }
 .title {
-  font-size: 50px;
-  padding-top: 15vh;
-}
-.description {
-  font-size: 20px;
+  font-size: 3vw;
   padding-top: 10vh;
 }
-/* .hidden {
-  animation-duration: 1s;
-  animation-name: concealTextRight;
+.description {
+  font-size: 1vw;
 }
-.animated {
-  animation-duration: 1s;
-  animation-name: revealTextRight;
-} */
+.centered {
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
 
 @keyframes revealTextRight {
   from {
@@ -82,4 +85,38 @@
   to {
     transform: translateX(-100%);
   }
+}
+.bordered.backpanelright {
+  border-left: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.bordered.backpanelleft {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-right: 0px;
+}
+.bordered {
+  border: 5px solid #f0f0f0;
+  box-sizing: border-box;
+}
+.box {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  /* height: 70vh;
+  width: 35vw;
+  position: inherit; */
+}
+.descriptionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+.descriptionBox > div {
+  margin: 10px;
+  padding: 10px;
+  flex-basis: auto;
 }

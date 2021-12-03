@@ -13,28 +13,33 @@ const PanelLeft = (props) => {
     });
   }, []);
   let name = align ? styles.transitionright : styles.transitionreturnleft;
+  const BorderAlign = align ? styles.hiddenBorder : "";
   const transitionDelay = align === true ? 0.7 : 0;
+  const highlighted = align ? styles.animated : styles.static;
   const panelname =
     props.side === "right" ? styles.panelright : styles.panelleft;
   if (props.side === "right") {
     name = align ? styles.transitionleft : styles.transitionreturnright;
-    console.log("here right");
-    console.log(name);
   } else {
     name = align ? styles.transitionright : styles.transitionreturnleft;
-    console.log("here left");
-    console.log(name);
   }
   return (
     <>
       <BackgroundPanel side={props.side} align={align} />
       <div
-        className={`${styles.split} ${name} ${panelname} `}
+        className={`${styles.split} ${styles.bordered} ${name} ${BorderAlign} ${panelname} `}
         style={{
           transition: `0.7s ease-in-out all; 0s z-index  ${transitionDelay}s`,
         }}
         onClick={(e) => {
           setAlign(!align);
+          if (align) {
+            document.querySelector(".homePage_vl__1SoO5").style.zIndex = "1";
+          } else {
+            setTimeout(() => {
+              document.querySelector(".homePage_vl__1SoO5").style.zIndex = "3";
+            }, 700);
+          }
         }}
       >
         <div className={`${styles.centered}`}>
@@ -42,7 +47,9 @@ const PanelLeft = (props) => {
             <Statistics {...props.stat} align={align} />
           </div>
           <div data-aos="fade-up">
-            <h2>{props.title}</h2>
+            <div className={highlighted}>
+              <h2>{props.title}</h2>
+            </div>
           </div>
         </div>
       </div>
