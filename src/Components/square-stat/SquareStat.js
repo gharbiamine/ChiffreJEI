@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./SquareStat.module.css";
-
+/*
+  this component encapsulates the combination of the statistics and its according box div in a background pannel
+*/
 export const SquareStat = ({ align, text1, text2, number }) => {
   const StatText = align ? styles.animated : styles.hidden;
   return (

@@ -3,18 +3,16 @@ import React from "react";
 import { useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import styles from "../stats/Statistics.module.css";
-
+/*
+  this component servers to provide the main countup statistic with a brief description
+  it uses a visibility sensor to queue the animation
+*/
 const Statistic = ({ start, end, delay, duration, align, prefix, suffix }) => {
   const highlighted = align ? styles.animated : styles.static;
   useEffect(() => {}, [align]);
 
   return (
-    <div
-      className={`${styles.stat} ${highlighted}`}
-      onClick={() => {
-        // console.log("Stat on click");
-      }}
-    >
+    <div className={`${styles.stat} ${highlighted}`} onClick={() => {}}>
       <VisibilitySensor partialVisibility>
         {({ isVisible }) => (
           <div

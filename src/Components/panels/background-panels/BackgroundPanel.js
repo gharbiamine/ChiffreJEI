@@ -1,9 +1,14 @@
 import styles from "./BackgroundPanel.module.css";
 import React from "react";
 import { SquareStat } from "../../square-stat/SquareStat";
-
+/*
+  This component represents the background pannel that is revealed upon animating the main pannel 
+  It provides further information on the stats at hand
+*/
 export const BackgroundPanel = ({ side, align }) => {
+  //panel alignment
   const name = side === "right" ? styles.backpanelright : styles.backpanelleft;
+  //animations depending on aligement
   const DescriptionText = align ? styles.animated : styles.hidden;
   const BorderAlign = align ? styles.hiddenBorder : "";
   return (
