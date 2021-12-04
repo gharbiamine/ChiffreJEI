@@ -2,6 +2,9 @@
   left: 0;
   background-image: url("../../../assets/images/background3.jpg");
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   transition: 0.7s ease-in-out all, 0s z-index;
   overflow: hidden;
   height: fit-content;
@@ -81,15 +84,22 @@
 }
 @keyframes highlightText {
   to {
-    transform: translateY(-100%);
+    transform: translateY(-70%);
+    font-size: 2vw;
+  }
+  from {
+    font-size: 1.5vw;
+    transform: translateY(0%);
   }
 }
 @keyframes unhighlightText {
   to {
     transform: translateY(0%);
+    font-size: 1.5vw;
   }
   from {
-    transform: translateY(-100%);
+    transform: translateY(-70%);
+    font-size: 2vw;
   }
 }
 
@@ -103,4 +113,8 @@
   animation-duration: 0.7s;
   animation-name: unhighlightText;
   animation-fill-mode: forwards;
+}
+h2 {
+  font-size: 1.5vw;
+  margin: 25px;
 }

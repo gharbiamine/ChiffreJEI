@@ -14,6 +14,16 @@
   flex-grow: 1;
   opacity: 0;
 }
+.stat {
+  opacity: 0;
+  padding: 10px;
+  font-size: 1vw;
+  text-align: center;
+}
+.squareStatContainer {
+  display: flex;
+  flex-direction: row;
+}
 .square.animated {
   animation-delay: 0.5s;
   animation-duration: 1s;
@@ -21,6 +31,17 @@
   animation-fill-mode: forwards;
 }
 .square.hidden {
+  animation-duration: 0.5s;
+  animation-name: concealBox;
+  animation-fill-mode: forwards;
+}
+.stat.animated {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-name: revealBox;
+  animation-fill-mode: forwards;
+}
+.stat.hidden {
   animation-duration: 0.5s;
   animation-name: concealBox;
   animation-fill-mode: forwards;

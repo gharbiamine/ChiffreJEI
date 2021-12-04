@@ -38,8 +38,8 @@ export const BackgroundPanel = ({ side, align }) => {
               Phasellus bibendum nunc non dui cursus luctus. Morbi eget pretium
               tortor.
             </div>
-            <SquareStat align={align} />
-            <SquareStat align={align} />
+            <SquareStat align={align} text1="Lorem" text2="ipsum" />
+            <SquareStat align={align} text1="Lorem" text2="ipsum" />
           </div>
         </div>
       </div>
