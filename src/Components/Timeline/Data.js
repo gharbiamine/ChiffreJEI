@@ -22,29 +22,5 @@
       description:
         "Suspendisse pellentesque varius leo, in placerat tortor sollicitudin quis. Quisque eget eros at tortor egestas convallis in vitae leo. Phasellus vel lectus efficitur, convallis sapien in, euismod libero. Nulla mollis sem id varius sodales. Etiam vel enim mauris. Pellentesque ante lacus,",
     },
-    {
-      imgLink:
-        "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-      date: "2019",
-      title: "Lorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sollicitudin lacinia. Nam vitae mi ac nulla sollicitudin mattis in sit amet augue. Integer et congue magna, quis mattis risus. Morbi lobortis odio tellus, nec semper ante sodales ut. Donec eu ligula nec massa convallis auctor et sit amet lacus.",
-    },
-    {
-      imgLink:
-        "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-      date: "2019",
-      title: "Lorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sollicitudin lacinia. Nam vitae mi ac nulla sollicitudin mattis in sit amet augue. Integer et congue magna, quis mattis risus. Morbi lobortis odio tellus, nec semper ante sodales ut. Donec eu ligula nec massa convallis auctor et sit amet lacus.",
-    },
-    {
-      imgLink:
-        "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-      date: "2019",
-      title: "Lorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sollicitudin lacinia. Nam vitae mi ac nulla sollicitudin mattis in sit amet augue. Integer et congue magna, quis mattis risus. Morbi lobortis odio tellus, nec semper ante sodales ut. Donec eu ligula nec massa convallis auctor et sit amet lacus.",
-    },
   ];
   export default timeline;
