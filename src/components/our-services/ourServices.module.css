@@ -1,0 +1,49 @@
+.services {
+  margin: 0;
+  font-family: helvetica;
+  padding-bottom: 10px;
+  background-color: #161616;
+  text-align: center;
+}
+.services h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 4px solid #004059;
+  font-size: 30px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  color: #292929;
+}
+.wrapper {
+  margin: 0 auto;
+  height: 400px;
+  background-color: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    height: 700px;
+  }
+  .services {
+    height: 1000px;
+  }
+}
+.content {
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 4%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .content {
+    padding-top: 300px;
+    flex-direction: column;
+  }
+}

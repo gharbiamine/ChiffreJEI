@@ -1,7 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+}
 .global {
-    margin: 0;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+.parallax {
+  background-image: url("../../assets/images/Homepage/20211013_093011.jpg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.empty {
+  height: 200px;
 }
