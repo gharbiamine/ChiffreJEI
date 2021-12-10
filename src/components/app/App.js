@@ -1,13 +1,6 @@
+import HomePage from "../../pages/home-page/HomePage";
 
-import styles from "./app.module.css"
-import {HomePage} from "../../pages/home-page/HomePage";
 function App() {
-  return (
-   <>
-<HomePage/>
-
-   </>
-  );
+  return <HomePage />;
 }
-
 export default App;
