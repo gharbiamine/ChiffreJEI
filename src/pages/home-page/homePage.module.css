@@ -6,6 +6,12 @@
 html {
   font-family: "Roboto", sans-serif;
 }
+.global {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
 .parallax {
   background-image: url("../../assets/images/Homepage/20211013_093011.jpg");
   min-height: 100vh;
