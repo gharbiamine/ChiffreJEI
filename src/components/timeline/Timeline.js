@@ -1,6 +1,6 @@
-import styles from "./Timeline.module.css";
+import styles from "./timeline.module.css";
 import { React, useEffect } from "react";
-import TimelineEvent from "../TimelineEvent/TimelineEvent";
+import TimelineEvent from "../timeline-event/TimelineEvent";
 import timeline from "./Data";
 import Aos from "aos";
 import "aos/dist/aos.css";

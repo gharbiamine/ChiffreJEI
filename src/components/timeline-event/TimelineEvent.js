@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styles from "./TimelineEvent.module.css";
+import styles from "./timelineEvent.module.css";
 function TimelineEvent(prop) {
   const location = useRef();
   function handleClick() {

@@ -1,5 +1,5 @@
 import video from '../../assets/videos/IntroductiveVideo/JuniorEntreprise.mp4';
-import styles from "./IntroductiveVideo.module.css";
+import styles from "./introductiveVideo.module.css";
 import poster from "../../assets/images/JeiPresentation/jei_team.jpg";
 function IntroductiveVideo() {
   return (

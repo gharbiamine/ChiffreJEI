@@ -1,5 +1,5 @@
-import styles from "./OurServices.module.css";
-import Service from "../Service/Service";
+import styles from "./ourServices.module.css";
+import Service from "../service/Service";
 import service from "./Data";
 function OurServices() {
   return (

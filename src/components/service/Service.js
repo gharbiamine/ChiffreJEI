@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Service.module.css";
+import styles from "./service.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Aos from "aos";
 import "aos/dist/aos.css";

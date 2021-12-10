@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import styles from "./JeiPresentation.module.css";
-import IntroductiveVideo from "../IntroductiveVideo/IntroductiveVideo";
+import styles from "./jeiPresentation.module.css";
+import IntroductiveVideo from "../introductive-video/IntroductiveVideo";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";

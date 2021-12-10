@@ -1,8 +1,8 @@
 import React from "react";
-import Timeline from "../../Components/Timeline/Timeline";
-import OurServices from "../../Components/OurServices/OurServices";
-import JeiPresentation from "../../Components/JeiPresentation/JeiPresentation";
-import styles from "./HomePage.module.css";
+import Timeline from "../../components/timeline/Timeline";
+import OurServices from "../../components/our-services/OurServices";
+import JeiPresentation from "../../components/jei-presentation/JeiPresentation";
+import styles from "./homePage.module.css";
 function HomePage() {
   return (
     <div>
