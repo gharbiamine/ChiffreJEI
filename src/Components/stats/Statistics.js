@@ -16,7 +16,7 @@ const Statistic = ({ start, end, delay, duration, align, prefix, suffix }) => {
       <VisibilitySensor partialVisibility>
         {({ isVisible }) => (
           <div
-            style={{ height: 100 }}
+            style={{ height: 140 }}
             className={`${styles.stat} ${highlighted}`}
           >
             {isVisible ? (

@@ -13,7 +13,7 @@ const PanelLeft = (props) => {
   //state indicating whether a panel has been moved or not
   const [align, setAlign] = useState(false);
   useEffect(() => {
-    Aos.init({
+    Aos.init({  
       duration: 700,
     });
   }, []);
@@ -39,7 +39,7 @@ const PanelLeft = (props) => {
       <div
         className={`${styles.split} ${styles.bordered} ${name} ${BorderAlign} ${panelname} `}
         style={{
-          transition: `0.7s ease-in-out all; 0s z-index  ${transitionDelay}s`,
+          transition: `0.7s ease-in-out all; 0s z-  index  ${transitionDelay}s`,
         }}
         onClick={(e) => {
           setAlign(!align);
