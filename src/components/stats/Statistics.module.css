@@ -1,0 +1,32 @@
+.stat {
+  font-size: 7vw;
+  padding: 5px;
+ 
+}
+@keyframes highlightText {
+  to {
+    transform: translateY(-50%);
+    font-size: 8vw;
+  }
+}
+@keyframes unhighlightText {
+  to {
+    transform: translateY(0%);
+  }
+  from {
+    transform: translateY(-50%);
+    font-size: 8vw;
+  }
+}
+
+.animated {
+  animation-duration: 0.7s;
+  animation-name: highlightText;
+  animation-fill-mode: forwards;
+}
+
+.static {
+  animation-duration: 0.7s;
+  animation-name: unhighlightText;
+  animation-fill-mode: forwards;
+}
