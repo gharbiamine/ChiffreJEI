@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Statistics from "../../stats/Statistics";
 import styles from "./Panel.module.css";
+import dividerStyles from "../../../pages/home-page/homePage.module.css"
 import BackgroundPanel from "../background-panels/BackgroundPanel";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -30,6 +31,8 @@ const PanelLeft = (props) => {
   const highlighted = align ? styles.animated : styles.static;
   //delay to smooth z-index transitions and prevent clipping
   const transitionDelay = align === true ? 0.7 : 0;
+  const dividerName = dividerStyles.vl;
+  // console.log(dividerName);
   return (
     <>
       <BackgroundPanel side={props.side} align={align} />
@@ -43,10 +46,10 @@ const PanelLeft = (props) => {
           //tries to solve the css divider z-index value conflict when animating
           //classname is chaotic due to the usage of css modules
           if (align) {
-            document.querySelector(".homePage_vl__1SoO5").style.zIndex = "1";
+            document.getElementsByClassName(dividerName)[0].style.zIndex = "1";
           } else {
             setTimeout(() => {
-              document.querySelector(".homePage_vl__1SoO5").style.zIndex = "3";
+              document.getElementsByClassName(dividerName)[0].style.zIndex = "3";
             }, 700);
           }
         }}
