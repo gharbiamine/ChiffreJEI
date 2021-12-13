@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./homePage.module.css";
-// import { FullPage, Slide } from "react-full-page";
-import Panel from "../../Components/panels/foreground-panels/Panel";
+import Panel from "../../components/panels/foreground-panels/Panel";
 
 export const HomePage = () => {
   return (

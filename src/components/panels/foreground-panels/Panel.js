@@ -32,7 +32,6 @@ const PanelLeft = (props) => {
   //delay to smooth z-index transitions and prevent clipping
   const transitionDelay = align === true ? 0.7 : 0;
   const dividerName = dividerStyles.vl;
-  // console.log(dividerName);
   return (
     <>
       <BackgroundPanel side={props.side} align={align} />
