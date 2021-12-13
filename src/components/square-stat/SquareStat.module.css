@@ -1,0 +1,64 @@
+.squareBox {
+  display: flex;
+  flex-direction: row;
+}
+.squareBox > div {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.square {
+  background-color: white;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 0.5vmax;
+  flex-grow: 1;
+  opacity: 0;
+}
+.stat {
+  opacity: 0;
+  padding: 10px;
+  font-size: 1vw;
+  text-align: center;
+}
+.squareStatContainer {
+  display: flex;
+  flex-direction: row;
+}
+.square.animated {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-name: revealBox;
+  animation-fill-mode: forwards;
+}
+.square.hidden {
+  animation-duration: 0.5s;
+  animation-name: concealBox;
+  animation-fill-mode: forwards;
+}
+.stat.animated {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-name: revealBox;
+  animation-fill-mode: forwards;
+}
+.stat.hidden {
+  animation-duration: 0.5s;
+  animation-name: concealBox;
+  animation-fill-mode: forwards;
+}
+@keyframes revealBox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes concealBox {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

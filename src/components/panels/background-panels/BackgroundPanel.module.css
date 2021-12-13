@@ -1,0 +1,122 @@
+.backpanelright {
+  right: 0;
+  background-color: #25243a;
+  background-size: cover;
+  z-index: 1;
+}
+.backpanelleft {
+  left: 0;
+  background-color: #25243a;
+  background-size: cover;
+  z-index: 1;
+}
+.backpanelleft .hidden {
+  animation-duration: 1s;
+  animation-name: concealTextLeft;
+}
+.backpanelleft .animated {
+  animation-duration: 1s;
+  animation-name: revealTextLeft;
+}
+.backpanelleft.hiddenBorder {
+  border-right: 0px solid black;
+}
+.backpanelright .hidden {
+  animation-duration: 1s;
+  animation-name: concealTextRight;
+}
+.backpanelright .animated {
+  animation-duration: 1s;
+  animation-name: revealTextRight;
+}
+.backpanelright.hiddenBorder {
+  border-left: 0px solid black;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+.title {
+  font-size: 3vw;
+  padding-top: 10vh;
+}
+.description {
+  font-size: 1vw;
+}
+.centered {
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+@keyframes revealTextRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes revealTextLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes concealTextRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes concealTextLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.bordered.backpanelright {
+  border-left: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.bordered.backpanelleft {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-right: 0px;
+}
+.bordered {
+  border: 5px solid #f0f0f0;
+  box-sizing: border-box;
+}
+.box {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  /* width: 35vw;
+  position: inherit; */
+}
+.descriptionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 70%; */
+}
+.descriptionBox > div {
+  margin: 10px;
+  padding: 7px;
+  flex-basis: auto;
+}
