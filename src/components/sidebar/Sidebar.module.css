@@ -1,0 +1,98 @@
+.icon {
+  position: relative;
+  font-size: 50px;
+  color: gray;
+}
+.icon:hover {
+  color: white;
+}
+.list {
+  position: absolute;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration:none;
+  font-size: 1.5em;
+  margin-top: 30%;
+}
+.drawer {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 2%;
+  left: 3%;
+  gap : 5%;
+  z-index: 4;
+}
+.list li{
+  color: gray;
+  padding: 30px 0 0 20px  ;
+}
+.list li:hover{
+  color: white;
+}
+
+.list li::before{
+  content: '';
+  height: .1vw;
+  width : 3vw;
+  display: flex;
+  background-color: gray;
+  margin: -15px 30px  0 -20px;
+
+  position: absolute;
+}
+.list li:hover::before{
+  width:10vw;
+  transition: .5s ease-in-out;
+}
+ul.list{
+  display: flex;
+  /*top: 10%;*/
+  row-gap: 20px;
+}
+.vl {
+  height: 80vh;
+  width: 1%;
+  /*left : -15%;*/
+  /*padding: 0 2px;*/
+  position: absolute;
+  justify-content: center;
+  background-color: gray;
+}
+.hl{
+  width: .1vw;
+  height : 5vw;
+  background-color: gray;
+  transform: rotate(90deg);
+}
+.bar{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*column-gap: 100px;*/
+}
+div.vl div{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.reveal{
+  transform: translateX(0%);
+  animation-fill-mode: forwards;
+  transition: .5s ease-in-out;
+}
+.hide{
+  transform: translateX(-300%);
+  animation-fill-mode: forwards;
+  transition: .5s ease-in-out;
+}

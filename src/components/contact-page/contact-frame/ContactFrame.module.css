@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    width: 68.44%;
+    height: 79%;
+    
+    background: rgba(0, 0, 0, 0.62);
+    border: 12px solid rgba(255, 255, 255, 0.575);
+
+    box-sizing: border-box;
+    
+    margin-left: 25.51%;
+    margin-top: 3vh;
+
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    gap: 3%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+}
+
+.flexItem {
+    margin-bottom: 3%;
+}

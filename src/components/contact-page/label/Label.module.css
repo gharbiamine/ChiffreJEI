@@ -1,0 +1,11 @@
+.global {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.2vw;
+    line-height: 29px;
+
+    margin-bottom: 1.6vh;
+
+    color: #FFFFFF;
+}

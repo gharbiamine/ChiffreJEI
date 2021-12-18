@@ -1,0 +1,17 @@
+.global {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8vw;
+    
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.underlined {
+    line-height: 26px;
+    text-decoration-line: underline;
+}

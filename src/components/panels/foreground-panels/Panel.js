@@ -41,6 +41,7 @@ const PanelLeft = (props) => {
           transition: `0.7s ease-in-out all; 0s z-  index  ${transitionDelay}s`,
         }}
         onClick={(e) => {
+
           setAlign(!align);
           //tries to solve the css divider z-index value conflict when animating
           //classname is chaotic due to the usage of css modules

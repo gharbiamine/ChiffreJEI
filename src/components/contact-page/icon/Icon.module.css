@@ -1,0 +1,12 @@
+.global {
+    width: auto;
+    text-align: center;
+    margin-right: 8%;
+    max-width: 10%;
+    height: auto;
+}
+
+.icon {
+    max-width: 100%;
+    height: auto;
+}
