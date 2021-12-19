@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Statistics from "../../stats/Statistics";
 import styles from "./Panel.module.css";
-import dividerStyles from "../../../pages/home-page/homePage.module.css"
+import dividerStyles from "../../jei-numbers/JeiNumbers.module.css";
 import BackgroundPanel from "../background-panels/BackgroundPanel";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,7 +13,7 @@ const PanelLeft = (props) => {
   //state indicating whether a panel has been moved or not
   const [align, setAlign] = useState(false);
   useEffect(() => {
-    Aos.init({  
+    Aos.init({
       duration: 700,
     });
   }, []);
@@ -36,7 +36,7 @@ const PanelLeft = (props) => {
     <>
       <BackgroundPanel side={props.side} align={align} />
       <div
-        className={`${styles.split} ${styles.bordered} ${name} ${BorderAlign} ${panelname} `}
+        className={`${styles.split} ${styles.bordered} ${name} ${BorderAlign} ${panelname} ${styles.background}`}
         style={{
           transition: `0.7s ease-in-out all; 0s z-  index  ${transitionDelay}s`,
         }}
@@ -48,7 +48,8 @@ const PanelLeft = (props) => {
             document.getElementsByClassName(dividerName)[0].style.zIndex = "1";
           } else {
             setTimeout(() => {
-              document.getElementsByClassName(dividerName)[0].style.zIndex = "3";
+              document.getElementsByClassName(dividerName)[0].style.zIndex =
+                "3";
             }, 700);
           }
         }}

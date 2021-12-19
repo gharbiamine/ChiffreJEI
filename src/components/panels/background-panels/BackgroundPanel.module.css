@@ -3,12 +3,14 @@
   background-color: #25243a;
   background-size: cover;
   z-index: 1;
+  filter: grayscale(30%) brightness(80%);
 }
 .backpanelleft {
   left: 0;
   background-color: #25243a;
   background-size: cover;
   z-index: 1;
+  filter: grayscale(30%) brightness(80%);
 }
 .backpanelleft .hidden {
   animation-duration: 1s;
